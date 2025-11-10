@@ -1,0 +1,188 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #c1cb95;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 90%;
+  max-width: 900px;
+}
+
+
+.login-left {
+  flex: 1;
+  background-color: #e6f4ea;
+  padding: 3em 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #14532d;
+}
+
+.login-left img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+.login-right {
+  flex: 1;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right h2 {
+  margin-bottom: 1.5em;
+  font-size: 1.8em;
+  color: #14532d;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.3em;
+  font-weight: 500;
+}
+
+input {
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #28a745;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 0.85em;
+  margin-top: -0.5em;
+  margin-bottom: 0.8em;
+  display: block;
+}
+
+.olvido {
+  font-size: 0.9em;
+  color: #464141;
+  margin-bottom: 1.5em;
+  text-decoration: none;
+  text-align: right;
+}
+
+.olvido:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 0.9em;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.cuenta {
+  margin-top: 1.5em;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.cuenta a {
+  color: #28a745;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cuenta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    box-shadow: none;
+    border-radius: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .login-left, .login-right {
+    width: 100%;
+    padding: 2em 1.5em;
+  }
+
+  .login-left {
+    order: 2; 
+    text-align: center;
+  }
+
+  .login-left img {
+    width: 200px;
+    margin-top: 1em;
+  }
+
+  .login-right {
+    order: 1;
+  }
+
+  .login-right h2 {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 0.95em;
+  }
+
+  .cuenta {
+    font-size: 0.9em;
+  }
+
+  .olvido {
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,260 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #007bff; 
+    --color-secundario: #6c757d; 
+    --color-header-fondo: #343a40; 
+    --color-fondo-claro: #f8f9fa; 
+    --color-progreso-barra: #28a745; 
+    --color-progreso-texto: #dc3545; 
+    --color-fondo-pagina: #e9ecef;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--color-fondo-pagina);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+.header {
+    background-color: #8ac2a3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: var(--color-primario);
+}
+
+.btn-atras, .btn-guardar {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-atras {
+    background-color: var(--color-secundario);
+}
+.btn-guardar {
+    background-color: #6c757d; 
+}
+
+
+.detalle-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 30px auto; 
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.columna-principal {
+    flex: 1;
+    min-width: 350px;
+}
+.columna-info {
+    flex: 2;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bloque-imagen {
+    margin-bottom: 30px;
+}
+.imagen-principal {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.top-donadores {
+    background: var(--color-fondo-claro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.top-donadores h3 {
+    color: var(--color-header-fondo);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+.lista-donadores {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    line-height: 1.8;
+}
+
+
+.titulo-proyecto {
+    font-size: 2.5em;
+    color: var(--color-header-fondo);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.creador {
+    font-size: 1.1em;
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+.bloque-info {
+    background: #eaf1f7; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.bloque-info h3 {
+    color: var(--color-primario);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.descripcion {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+.metrica p {
+    margin-bottom: 5px;
+}
+.barra-progreso {
+    height: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.progreso-relleno {
+    height: 100%;
+    background-color: var(--color-progreso-barra);
+    transition: width 0.5s ease;
+}
+.porcentaje {
+    font-size: 1.1em;
+    color: var(--color-progreso-texto);
+    font-weight: bold;
+}
+
+
+.bloque-donar {
+    margin-top: auto; 
+    padding: 20px;
+    background: var(--color-fondo-claro);
+    border-radius: 8px;
+    text-align: center;
+}
+.btn-donar {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+.btn-donar:hover {
+    background-color: #0056b3;
+}
+
+
+.footer {
+    background: var(--color-header-fondo);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+    
+}
+
+
+@media (max-width: 992px) {
+    .detalle-container {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: none;
+    }
+    .columna-principal, .columna-info {
+        min-width: unset;
+        width: 100%;
+    }
+    .titulo-proyecto {
+        font-size: 2em;
+    }
+    .bloque-info {
+        order: -1; 
+    }
+    .bloque-donar {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 10px 0;
+    }
+    .btn-donar {
+        width: 100%;
+        padding: 12px;
+    }
+}
